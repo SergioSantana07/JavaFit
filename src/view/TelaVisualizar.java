@@ -20,9 +20,9 @@ public class TelaVisualizar extends javax.swing.JFrame {
 
         for (Funcionario f : FuncionarioRepositorio.getListaFuncionarios()) {
             modelo.addRow(new Object[]{
-                f.getNome(),
                 f.getCargo(),
                 f.getCpf(),
+                f.getNome(),
                 f.getTelefone(),
                 f.getEndereco(),
                 f.getBairro(),
@@ -125,6 +125,9 @@ public class TelaVisualizar extends javax.swing.JFrame {
             }
         });
 
+        jTable1.setBackground(new java.awt.Color(51, 51, 51));
+        jTable1.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        jTable1.setForeground(new java.awt.Color(255, 255, 255));
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -133,6 +136,8 @@ public class TelaVisualizar extends javax.swing.JFrame {
                 "Cargo", "CPF", "Nome", "Telefone", "Endereço", "Bairro", "Cidade", "Nascimento"
             }
         ));
+        jTable1.setGridColor(new java.awt.Color(153, 153, 153));
+        jTable1.setSelectionBackground(new java.awt.Color(51, 51, 51));
         jScrollPane1.setViewportView(jTable1);
 
         jLabel4.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
@@ -160,13 +165,12 @@ public class TelaVisualizar extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel11)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 779, Short.MAX_VALUE)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 781, Short.MAX_VALUE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(btn_voltar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(Deletar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jButton1_Editar, javax.swing.GroupLayout.DEFAULT_SIZE, 79, Short.MAX_VALUE))
+                                    .addComponent(Deletar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jButton1_Editar, javax.swing.GroupLayout.DEFAULT_SIZE, 79, Short.MAX_VALUE)
                                     .addComponent(jButton1_Cadastro2, javax.swing.GroupLayout.DEFAULT_SIZE, 79, Short.MAX_VALUE))))
                         .addGap(9, 9, 9))
                     .addGroup(jPanel1Layout.createSequentialGroup()
